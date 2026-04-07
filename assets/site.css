@@ -358,6 +358,85 @@ img {
   border-radius: inherit;
 }
 
+.contact-carousel {
+  margin-bottom: 1.25rem;
+}
+
+.carousel-viewport {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.carousel-track {
+  position: relative;
+}
+
+.carousel-slide {
+  display: none;
+  margin: 0;
+}
+
+.carousel-slide.is-active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: clamp(320px, 42vw, 540px);
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.carousel-nav.prev {
+  left: 0.7rem;
+}
+
+.carousel-nav.next {
+  right: 0.7rem;
+}
+
+.carousel-dots {
+  margin-top: 0.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel-dots button.is-active {
+  background: rgba(0, 0, 0, 0.72);
+}
+
 .legal {
   margin-top: 2.2rem;
   border-radius: var(--radius-lg);
@@ -436,12 +515,13 @@ img {
     position: absolute;
     left: 0.72rem;
     right: 0.72rem;
-    top: calc(100% + 0.28rem);
+    top: 100%;
     display: grid;
     gap: 0;
     background: rgba(255, 255, 255, 0.76);
-    border-radius: 12px;
+    border-radius: 0 0 12px 12px;
     border: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 0;
     padding: 0;
     opacity: 0;
     max-height: 0;
@@ -476,7 +556,7 @@ img {
   }
 
   .site-header.menu-open .menu-toggle {
-    transform: translateY(33px);
+    transform: translateY(43px);
   }
 
   .site-header.menu-open .line:nth-child(1) {
@@ -530,5 +610,15 @@ img {
 
   .contact-top-image img {
     height: min(88vw, 420px);
+  }
+
+  .carousel-slide img {
+    height: min(88vw, 420px);
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
   }
 }

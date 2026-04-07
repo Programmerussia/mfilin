@@ -28,9 +28,42 @@
       </header>
 
       <main>
-        <figure class="contact-top-image section">
-          <img src="../freight.cargo.site/w/1500/i/Y2753641065979261258652853968532/Poster-drauen.jpg" alt="Kontaktbild" />
-        </figure>
+        <section class="contact-carousel section js-carousel" aria-label="Kontakt Galerie">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <figure class="carousel-slide is-active">
+                <img
+                  src="../freight.cargo.site/w/1500/i/Y2753641065979261258652853968532/Poster-drauen.jpg"
+                  alt="Kontaktbild 1"
+                  loading="eager"
+                />
+              </figure>
+              <figure class="carousel-slide">
+                <img
+                  src="../freight.cargo.site/w/1500/i/N2755393262486712362363039227540/kapi-film.jpg"
+                  alt="Kontaktbild 2"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="carousel-slide">
+                <img
+                  src="../freight.cargo.site/w/1500/i/J2753616697793446400187750129300/bearbei1104.jpg"
+                  alt="Kontaktbild 3"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <button class="carousel-nav prev" type="button" aria-label="Предыдущий слайд">‹</button>
+            <button class="carousel-nav next" type="button" aria-label="Следующий слайд">›</button>
+          </div>
+
+          <div class="carousel-dots" role="tablist" aria-label="Выбор слайда">
+            <button class="is-active" type="button" aria-label="Слайд 1"></button>
+            <button type="button" aria-label="Слайд 2"></button>
+            <button type="button" aria-label="Слайд 3"></button>
+          </div>
+        </section>
 
         <section class="page-card">
           <h2 class="section-title">Kontakt</h2>

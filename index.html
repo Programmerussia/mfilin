@@ -4,6 +4,17 @@
 	<base href="/" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script>
+			(function () {
+				var baseEl = document.querySelector('base[href]');
+				var baseHref = baseEl ? baseEl.getAttribute('href') : '/';
+				var normalizedBase = baseHref.endsWith('/') ? baseHref : baseHref + '/';
+				var path = window.location.pathname;
+				if (path === normalizedBase || path === normalizedBase.slice(0, -1)) {
+					window.location.replace(normalizedBase + 'home2/');
+				}
+			})();
+		</script>
 
 		
 			<title>Portfolio von Maria Filinskikh</title>

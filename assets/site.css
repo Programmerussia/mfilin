@@ -198,7 +198,7 @@ img {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   justify-content: center;
-  align-items: stretch;
+  align-items: start;
   gap: 40px;
 }
 
@@ -372,6 +372,15 @@ img {
   height: clamp(300px, 42vw, 520px);
   object-fit: cover;
   border-radius: inherit;
+}
+
+.contact-main-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.contact-main-image__img {
+  border-radius: 20px;
 }
 
 .legal {

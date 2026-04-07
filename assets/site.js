@@ -1,5 +1,5 @@
 (() => {
-  const BRAND_HIDE_DELAY_MS = 360;
+  const BRAND_HIDE_DELAY_MS = 430;
   const DESKTOP_PAIR_BREAKPOINT = 1120;
   const headers = document.querySelectorAll('.site-header');
 

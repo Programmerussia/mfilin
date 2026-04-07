@@ -4,15 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Redirecting to Home</title>
-    <meta http-equiv="refresh" content="0; url=home2/" />
+    <meta http-equiv="refresh" content="0; url=/mfilin/home2/" />
     <script>
-      (function () {
-        var target = new URL('home2/', document.baseURI).toString();
-        window.location.replace(target);
-      })();
+      window.location.replace('/mfilin/home2/');
     </script>
   </head>
   <body>
-    Redirecting to <a href="home2/">home page</a>...
+    Redirecting to <a href="/mfilin/home2/">home page</a>...
   </body>
 </html>

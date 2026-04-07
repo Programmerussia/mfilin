@@ -255,9 +255,13 @@ img {
 }
 
 .hero-media {
+  margin: 0;
+  justify-self: end;
+  align-self: start;
+  width: min(100%, 620px);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  min-height: 420px;
+  aspect-ratio: 6192 / 6960;
   box-shadow: var(--shadow-soft);
 }
 
@@ -348,6 +352,7 @@ img {
 }
 
 .about-image {
+  margin: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -361,6 +366,8 @@ img {
 }
 
 .contact-top-image {
+  margin-inline: 0;
+  margin-top: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -427,8 +434,9 @@ img {
   }
 
   .hero-media {
+    margin: 0;
     order: -1;
-    min-height: auto;
+    width: 100%;
     aspect-ratio: 1 / 1;
   }
 

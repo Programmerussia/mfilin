@@ -52,6 +52,7 @@ jobs:
           # This keeps mirrored Cargo paths working on https://<user>.github.io/<repo>/.
           if [[ ! -f CNAME ]]; then
             BASE="/${GITHUB_REPOSITORY#*/}"
+            PAGES_HOST="${GITHUB_REPOSITORY_OWNER}.github.io"
             echo "Rewriting root-absolute paths with base: ${BASE}"
 
             find _site -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \) -print0 \
@@ -61,7 +62,8 @@ jobs:
                   -e "s|content=\"/|content=\"${BASE}/|g" \
                   -e "s|url('/|url('${BASE}/|g" \
                   -e "s|url(\"/|url(\"${BASE}/|g" \
-                  -e "s|\":\"/|\":\"${BASE}/|g"
+                  -e "s|\":\"/|\":\"${BASE}/|g" \
+                  -e "s|\"hostname\":\"127\\.0\\.0\\.1:8080\"|\"hostname\":\"${PAGES_HOST}\"|g"
 
             find _site -name '*.bak' -delete
           else
